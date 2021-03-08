@@ -2,5 +2,5 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in container_config_loader.gemspec
+# Specify your gem's dependencies in container_config.gemspec
 gemspec

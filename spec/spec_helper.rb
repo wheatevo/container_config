@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "container_config_loader"
+require "container_config"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

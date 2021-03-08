@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
-require_relative "lib/container_config_loader/version"
+require_relative "lib/container_config/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "container_config_loader"
-  spec.version       = ContainerConfigLoader::VERSION
+  spec.name          = "container_config"
+  spec.version       = ContainerConfig::VERSION
   spec.authors       = ["Matthew Newell"]
   spec.email         = ["matthewtnewell@gmail.com"]
 
-  spec.summary       = "Loads values from environment variables, secrets, and application credentials."
-  spec.description   = "Loads values from environment variables, secrets, and application credentials."
-  spec.homepage      = "https://github.com/wheatevo/container_config_loader"
+  spec.summary       = "Loads container configuration values from environment variables, secrets, and credentials."
+  spec.description   = "Loads container configuration values from environment variables, secrets, and credentials."
+  spec.homepage      = "https://github.com/wheatevo/container_config"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/wheatevo/container_config_loader"
-  spec.metadata["changelog_uri"] = "https://github.com/wheatevo/container_config_loader/blob/master/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/wheatevo/container_config"
+  spec.metadata["changelog_uri"] = "https://github.com/wheatevo/container_config/blob/master/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

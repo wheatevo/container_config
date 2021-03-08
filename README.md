@@ -1,13 +1,13 @@
-# Container Config Loader
+# Container Config
 
-The `ContainerConfigLoader` loads values from environment variables, secrets, and application credentials within Ruby applications. Rails is not required, but this gem will integrate with Rails if it is available.
+`ContainerConfig` loads values from environment variables, secrets, and application credentials within Ruby applications. Rails is not required, but this gem will integrate with Rails if it is available.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'container_config_loader'
+gem 'container_config'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install container_config_loader
+    $ gem install container_config
 
 ## Usage
 
@@ -30,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/wheatevo/container_config_loader.
+Bug reports and pull requests are welcome on GitHub at https://github.com/wheatevo/container_config.
 
 ## License
 
