@@ -17,6 +17,7 @@ jobs:
         bundle install
         bundle exec rake
         bundle exec yard
+
     - name: Deploy documentation
       if: github.ref == 'refs/heads/main'
       uses: crazy-max/ghaction-github-pages@v2.2.0
@@ -32,4 +33,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
-        RELEASE_COMMAND: bundle exec rake release
+        RELEASE_COMMAND: gem update bundler && bundle exec rake release
