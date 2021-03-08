@@ -22,13 +22,13 @@ Or install it yourself as:
 
 ```ruby
 # Retrieve the value of the POSTGRES_USER environment variable, secret mount, or Rails credential
-ConfigLoader.load("POSTGRES_USER")
+ContainerConfig.load("POSTGRES_USER")
 
 # Retrieve the value of the POSTGRES_PORT environment variable, secret mount, or Rails credential as an integer with a default value of 5432
-ConfigLoader.load("POSTGRES_PORT", type: :integer, default: 5432)
+ContainerConfig.load("POSTGRES_PORT", type: :integer, default: 5432)
 
 # Retrieve the value of the POSTGRES_PASSWORD environment variable, secret mount, or Rails credential and raise an exception if it cannot be found
-ConfigLoader.load("POSTGRES_PASSWORD", required: true)
+ContainerConfig.load("POSTGRES_PASSWORD", required: true)
 ```
 
 Full documentation is available in the [ContainerConfig GitHub Pages](https://wheatevo.github.io/container_config/).
