@@ -1,4 +1,9 @@
+# frozen_string_literal: true
+
+require "logger"
+
 module ContainerConfig
-  module Logger
+  # ContainerConfig Logging class
+  class Logger < ::Logger
   end
 end

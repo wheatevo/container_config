@@ -13,3 +13,7 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+# Define Rails for testing
+module Rails
+end
