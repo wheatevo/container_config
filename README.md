@@ -31,7 +31,7 @@ ConfigLoader.load("POSTGRES_PORT", type: :integer, default: 5432)
 ConfigLoader.load("POSTGRES_PASSWORD", required: true)
 ```
 
-Full documentation is available in the [ContainerConfig GitHub Pages](https://pages.github.com/wheatevo/container_config/).
+Full documentation is available in the [ContainerConfig GitHub Pages](https://wheatevo.github.io/container_config/).
 
 ### Extending ContainerConfig
 
