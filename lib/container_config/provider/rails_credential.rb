@@ -24,7 +24,7 @@ module ContainerConfig
       #
       def load(key, *dig_keys, **options)
         super
-        ::Rails.application.credentials.config.dig(*dig_keys.map(&:to_sym))
+        ::Rails.application&.credentials&.config&.dig(*dig_keys.map(&:to_sym))
       end
     end
   end
