@@ -20,5 +20,16 @@ RSpec.describe ContainerConfig::Provider::RailsCredential do
       expect(subject.load("NOTHING", "nothing")).to eq(nil)
       expect(subject.load("TEST_VAR", "test", "var")).to eq("from_creds")
     end
+
+    context "when Rails.application is nil" do
+      before do
+        allow(Rails).to receive(:application).and_return(nil)
+      end
+
+      it "returns nil" do
+        expect(subject.load("NOTHING")).to eq(nil)
+        expect(subject.load("TEST_VAR")).to eq(nil)
+      end
+    end
   end
 end
