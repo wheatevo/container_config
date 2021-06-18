@@ -154,7 +154,7 @@ module ContainerConfig
     def handle_empty_value(config_value, key, **options)
       if config_value.nil? || config_value.to_s.empty?
         provider_list = providers.map(&:name).join(", ")
-        logger.warn { "Could not find value for #{key} in providers: #{provider_list}" }
+        logger.debug { "Could not find value for #{key} in providers: #{provider_list}" }
         raise MissingRequiredValue, "Could not find value for #{key} in providers: #{provider_list}!" if options[:required]
       else
         logger.debug { "Configuration value for #{key} loaded" }
