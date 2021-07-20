@@ -23,12 +23,14 @@ module ContainerConfig
       url = ContainerConfig.load("#{key}_URL", **options, default: "redis://#{host}:#{port}")
       sentinels = sentinel_info(key, **options)
       password = ContainerConfig.load("#{key}_PASSWORD", **options)
+      db = ContainerConfig.load("#{key}_DB", **options, type: :integer, coerce_nil: false)
 
       # Ensure we never pass an empty string to Redis since it will be passed to the Redis AUTH
       # command as-is and will cause an exception
       password = nil if password.to_s.strip.empty?
 
       redis_config = { url: url, password: password }
+      redis_config[:db] = db if db
       redis_config[:sentinels] = sentinels unless sentinels.empty?
 
       # Add SSL configuration

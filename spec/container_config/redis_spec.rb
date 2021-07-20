@@ -29,12 +29,12 @@ RSpec.describe ContainerConfig::Redis do
 
     context "when single node config is specified" do
       before do
-        stub_const("ENV", { "TEST_HOST" => "test" })
+        stub_const("ENV", { "TEST_HOST" => "test", "TEST_DB" => "3" })
       end
 
       it "returns the single node config" do
         expect(described_class.load("TEST")).to eq(
-          { url: "redis://test:6379", password: nil, ssl: false, ssl_params: {} }
+          { url: "redis://test:6379", password: nil, ssl: false, ssl_params: {}, db: 3 }
         )
       end
     end
